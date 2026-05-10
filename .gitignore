@@ -1,0 +1,9 @@
+ARCHIVE/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform
+.terraform.lock.hcl
+.venv
+.envrc
+
