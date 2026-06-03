@@ -66,7 +66,9 @@ resource "proxmox_virtual_environment_container" "this" {
   }
 
   cpu {
-    cores = var.cores
+    cores        = var.cores
+    architecture = var.cpu_architecture
+    limit        = var.cpu_limit
   }
 
   memory {

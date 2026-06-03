@@ -27,6 +27,18 @@ variable "cores" {
   default     = 2
 }
 
+variable "cpu_architecture" {
+  description = "CPU architecture (e.g. 'amd64', 'arm64')"
+  type        = string
+  default     = "amd64"
+}
+
+variable "cpu_limit" {
+  description = "CPU limit as a percentage (e.g. 200 for 2 cores)"
+  type        = number
+  default     = 0
+}
+
 variable "memory" {
   description = "Memory in MB"
   type        = number
@@ -161,4 +173,3 @@ variable "keyctl" {
   type        = bool
   default     = false
 }
-
