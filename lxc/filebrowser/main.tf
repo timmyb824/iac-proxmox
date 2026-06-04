@@ -2,6 +2,7 @@ module "filebrowser" {
   source = "../../modules/lxc"
 
   hostname           = "filebrowser"
+  description        = "filebrowser — managed by OpenTofu -- To update re-run the install script"
   vm_id              = 215
   cores              = 2
   memory             = 1024
