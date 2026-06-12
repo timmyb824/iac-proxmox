@@ -20,6 +20,7 @@ resource "proxmox_virtual_environment_container" "this" {
   tags         = var.tags
   vm_id        = var.vm_id
   unprivileged = var.unprivileged
+  protection   = var.protection
 
   #  operating_system {
   #    template_file_id = proxmox_download_file.os_template.id
@@ -54,9 +55,6 @@ resource "proxmox_virtual_environment_container" "this" {
       }
     }
 
-    #    user_account {
-    #      keys = var.ssh_keys
-    #    }
     dynamic "user_account" {
       for_each = length(var.ssh_keys) > 0 ? [1] : []
       content {
@@ -98,12 +96,14 @@ resource "proxmox_virtual_environment_container" "this" {
     nesting = var.nesting
     mount   = var.nfs_mount ? ["nfs"] : []
     keyctl  = var.keyctl
+    fuse    = var.fuse
   }
 
   lifecycle {
     ignore_changes = [
       operating_system[0].template_file_id,
       vm_id,
+      features[0].mount,
     ]
   }
 

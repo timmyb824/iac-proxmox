@@ -173,3 +173,15 @@ variable "keyctl" {
   type        = bool
   default     = false
 }
+
+variable "fuse" {
+  description = "Enable FUSE support"
+  type        = bool
+  default     = false
+}
+
+variable "protection" {
+  description = "Protection status of the container (locked or unlocked)"
+  type        = string
+  default     = false
+}
