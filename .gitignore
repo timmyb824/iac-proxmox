@@ -6,4 +6,5 @@ ARCHIVE/
 .terraform.lock.hcl
 .venv
 .envrc
-
+.ropeproject/
+.remember/
