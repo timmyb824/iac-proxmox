@@ -6,7 +6,7 @@ module "prometheus" {
   cores              = 1
   memory             = 3072
   swap               = 1024
-  disk_size          = 16
+  disk_size          = 20
   datastore_id       = "local-lvm"
   create_os_template = false
   template_file_name = "debian-12-standard_12.12-1_amd64.tar.zst"
