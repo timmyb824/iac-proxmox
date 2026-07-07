@@ -1,10 +1,10 @@
 module "k3s_0" {
   source = "../../modules/k3s"
 
-  node_name  = "pve4"
-  vm_id      = 500
+  node_name  = "pve6"
+  vm_id      = 600
   name       = "k3s-0"
-  storage    = "local-zfs4"
+  storage    = "local-lvm"
   ip_address = "192.168.86.180"
   memory     = 6144
   balloon    = 5120
