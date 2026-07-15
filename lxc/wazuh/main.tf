@@ -17,6 +17,7 @@ module "wazuh" {
   tags         = ["wazuh", "managed-by-tofu"]
   ipv6         = "auto"
   unprivileged = true
+  os_type      = "ubuntu"
 }
 
 output "lxc_id" {
