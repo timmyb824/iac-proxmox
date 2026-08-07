@@ -1,7 +1,7 @@
 module "k3s_0_worker" {
   source = "../../modules/k3s"
 
-  node_name  = "pve6"
+  node_name  = "pve4"
   vm_id      = 503
   name       = "k3s-0-worker"
   storage    = "local-lvm"
