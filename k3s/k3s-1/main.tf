@@ -1,7 +1,7 @@
 module "k3s_1" {
   source = "../../modules/k3s"
 
-  node_name  = "pve6"
+  node_name  = "pve4"
   vm_id      = 601
   name       = "k3s-1"
   storage    = "local-lvm"
