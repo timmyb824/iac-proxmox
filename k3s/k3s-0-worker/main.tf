@@ -1,8 +1,8 @@
 module "k3s_0_worker" {
   source = "../../modules/k3s"
 
-  node_name  = "pve4"
-  vm_id      = 503
+  node_name  = "pve6"
+  vm_id      = 603
   name       = "k3s-0-worker"
   storage    = "local-lvm"
   ip_address = "192.168.86.190"
