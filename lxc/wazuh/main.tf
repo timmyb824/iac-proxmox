@@ -4,7 +4,7 @@ module "wazuh" {
   hostname           = "wazuh"
   vm_id              = 100
   cores              = 4
-  memory             = 4096
+  memory             = 5120
   swap               = 2048
   disk_size          = 25
   datastore_id       = "local-zfs2"
