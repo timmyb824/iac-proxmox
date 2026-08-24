@@ -1,11 +1,11 @@
-# Import with: `tofu import module.pbs.proxmox_virtual_environment_container.this pve5/217`
+# Import with: `tofu import module.pbs.proxmox_virtual_environment_container.this pve4/101`
 
 module "pbs" {
   source = "../../modules/lxc"
 
-  node_name          = "pve5"
+  node_name          = "pve4"
   hostname           = "proxmox-backup-server"
-  vm_id              = 217
+  vm_id              = 101
   cores              = 2
   memory             = 2048
   swap               = 512
@@ -17,9 +17,11 @@ module "pbs" {
   protection         = true
   tags               = ["backup", "community-script", "managed-by-tofu"]
   fuse               = true
+  nfs_mount          = true
+  ipv6               = "auto"
 
   mount_points = [
-    { volume = "/mnt/pbs-datastore", path = "/mnt/datastore" },
+    { volume = "/mnt/nas/pbs_datastore", path = "/mnt/pbs_datastore" },
   ]
 
 }
