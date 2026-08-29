@@ -9,7 +9,7 @@ module "logging" {
   cores              = 2
   memory             = 2048
   swap               = 512
-  disk_size          = 30
+  disk_size          = 40
   datastore_id       = "local-lvm"
   create_os_template = false
   template_file_name = "debian-12-standard_12.12-1_amd64.tar.zst"
