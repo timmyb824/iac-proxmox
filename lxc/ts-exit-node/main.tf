@@ -4,13 +4,13 @@ module "ts-exit-node" {
   source = "../../modules/lxc"
 
   hostname           = "ts-exit-node"
-  node_name          = "pve3"
-  vm_id              = 205
+  node_name          = "pve6"
+  vm_id              = 105
   cores              = 1
   memory             = 512
   swap               = 512
   disk_size          = 4 
-  datastore_id       = "local-zfs3"
+  datastore_id       = "local-lvm"
   create_os_template = false
   template_file_name = "debian-12-standard_12.12-1_amd64.tar.zst"
   ssh_keys           = []

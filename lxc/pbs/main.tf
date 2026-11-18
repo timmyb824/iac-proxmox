@@ -18,7 +18,7 @@ module "pbs" {
   tags               = ["backup", "community-script", "managed-by-tofu"]
   fuse               = true
   nfs_mount          = true
-  ipv6               = "auto"
+  ipv6               = "manual"
 
   mount_points = [
     { volume = "/mnt/nas/pbs_datastore", path = "/mnt/pbs_datastore" },

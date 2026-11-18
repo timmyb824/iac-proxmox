@@ -1,10 +1,10 @@
 module "k3s_2_worker" {
   source = "../../modules/k3s"
 
-  node_name  = "pve3"
-  vm_id      = 505
+  node_name  = "pve4"
+  vm_id      = 605
   name       = "k3s-2-worker"
-  storage    = "local-lvm"
+  storage    = "local-lvm-1tb-nvme"
   ip_address = "192.168.86.192"
   memory     = 7168
   balloon    = 5120

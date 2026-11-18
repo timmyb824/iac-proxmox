@@ -4,13 +4,13 @@ module "logging" {
   source = "../../modules/lxc"
 
   hostname           = "logging"
-  node_name          = "pve3"
-  vm_id              = 206
+  node_name          = "pve4"
+  vm_id              = 106
   cores              = 2
   memory             = 2048
   swap               = 512
   disk_size          = 40
-  datastore_id       = "local-lvm"
+  datastore_id       = "local-lvm-1tb-nvme"
   create_os_template = false
   template_file_name = "debian-12-standard_12.12-1_amd64.tar.zst"
   ssh_keys           = []

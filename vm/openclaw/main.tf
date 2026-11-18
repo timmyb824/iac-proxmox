@@ -1,11 +1,11 @@
 module "openclaw" {
   source = "../../modules/vm"
 
-  node_name         = "pve3"
-  vm_id             = 300
+  node_name         = "pve4"
+  vm_id             = 302
   name              = "openclaw"
-  storage           = "local-zfs3"
-  cloudinit_storage = "local-zfs3"
+  storage           = "local-lvm-1tb-nvme"
+  cloudinit_storage = "local-lvm-1tb-nvme"
   disk_interface    = "virtio0"
   disk_size         = 64
   ip_address        = "192.168.86.93"
