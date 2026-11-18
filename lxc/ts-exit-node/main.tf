@@ -1,4 +1,4 @@
-# Import with: `tofu import module.ts-exit-node.proxmox_virtual_environment_container.this pve4/105`
+# Import with: `tofu import module.ts-exit-node.proxmox_virtual_environment_container.this pve6/105`
 
 module "ts-exit-node" {
   source = "../../modules/lxc"
@@ -9,7 +9,7 @@ module "ts-exit-node" {
   cores              = 1
   memory             = 512
   swap               = 512
-  disk_size          = 4 
+  disk_size          = 4
   datastore_id       = "local-lvm"
   create_os_template = false
   template_file_name = "debian-12-standard_12.12-1_amd64.tar.zst"
