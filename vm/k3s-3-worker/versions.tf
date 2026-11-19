@@ -10,7 +10,7 @@ terraform {
 
   backend "s3" {
     bucket = "terraform-state"
-    key    = "proxmox/k3s/k3s-3-worker/terraform.tfstate"
+    key    = "proxmox/vm/k3s-3-worker/terraform.tfstate"
 
     endpoints = {
       s3 = "https://rustfs-endpoint.local.timmybtech.com"
